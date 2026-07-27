@@ -1,0 +1,12 @@
+node_modules/
+.pnpm-store/
+.turbo/
+build/
+dist/
+coverage/
+.env.*.local
+apps/*/build/
+apps/*/node_modules/
+packages/*/node_modules/
+.idea*
+config.bat
