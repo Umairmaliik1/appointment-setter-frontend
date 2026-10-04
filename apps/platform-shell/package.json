@@ -2,7 +2,7 @@
   "name": "@mindrind/platform-shell",
   "version": "1.0.0",
   "private": true,
-  "description": "Platform shell app for ShipStack Voice frontend monorepo",
+  "description": "Platform shell app for Bookhatch AI frontend monorepo",
   "scripts": {
     "start": "react-scripts start",
     "dev": "react-scripts start",

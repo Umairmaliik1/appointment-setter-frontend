@@ -262,7 +262,7 @@ const GoogleCalendarIntegration = ({ tenantId: propTenantId }) => {
                   Google Calendar Re-Authorization Required
                 </p>
                 <p className="text-amber-800">
-                  Your Google Calendar connection needs to be reconnected. The authorization grant has expired or was revoked. Click Reconnect below to re-authorize ShipStack Voice.
+                  Your Google Calendar connection needs to be reconnected. The authorization grant has expired or was revoked. Click Reconnect below to re-authorize Bookhatch AI.
                 </p>
               </div>
             </div>

@@ -103,7 +103,7 @@ const LauncherPage = () => {
                     {getGreeting()}, {user?.first_name || "there"}!
                   </h1>
                   <p className="mt-2 text-sm text-slate-500">
-                    {branding?.brand_name || "ShipStack Voice"} workspace
+                    {branding?.brand_name || "Bookhatch AI"} workspace
                     {activeOrg?.name ? ` - ${activeOrg.name}` : ""}
                   </p>
                 </div>

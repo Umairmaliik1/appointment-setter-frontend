@@ -22,8 +22,8 @@ const Navbar = () => {
                 <Calendar className="h-5 w-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-lg font-bold tracking-tight text-gray-900 leading-tight">ShipStack Voice</span>
-                <span className="text-[10px] font-medium text-gray-500">by ShipStack AI</span>
+                <span className="text-lg font-bold tracking-tight text-gray-900 leading-tight">Bookhatch AI</span>
+                <span className="text-[10px] font-medium text-gray-500">Built by DAU Labs</span>
               </div>
             </Link>
           </div>

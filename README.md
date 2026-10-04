@@ -1,7 +1,7 @@
-# ShipStack Voice - Frontend Monorepo
+# Bookhatch AI - Frontend Monorepo
 
-> **Engineered by ShipStack AI**  
-> Workspace for the ShipStack Voice platform shell, microfrontends, and shared design system.
+> **Every call answered, Every job booked. Built by DAU Labs**  
+> Workspace for the Bookhatch AI platform shell, microfrontends, and shared design system.
 
 ## Layout
 

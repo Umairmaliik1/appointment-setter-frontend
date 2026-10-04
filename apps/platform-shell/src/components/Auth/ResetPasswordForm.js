@@ -76,8 +76,8 @@ const ResetPasswordForm = () => {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col">
       <div className="px-8 py-6 flex items-center">
         <div className="leading-tight">
-          <h1 className="text-2xl font-bold tracking-tight text-gray-900">ShipStack Voice</h1>
-          <p className="text-xs text-gray-500 font-medium">by ShipStack AI</p>
+          <h1 className="text-2xl font-bold tracking-tight text-gray-900">Bookhatch AI</h1>
+          <p className="text-xs text-gray-500 font-medium">Every call answered, Every job booked. Built by DAU Labs</p>
         </div>
       </div>
       <div className="flex flex-1 items-center justify-center px-4">

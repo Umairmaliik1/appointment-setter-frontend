@@ -154,10 +154,10 @@ export const PlatformLayout = () => {
                 </div>
                 <div>
                   <div className="text-[0.82rem] font-bold tracking-[0.12em] text-slate-900">
-                    {branding?.brand_name || "ShipStack Voice"}
+                    {branding?.brand_name || "Bookhatch AI"}
                   </div>
                   <div className="text-[10px] tracking-wide text-slate-400">
-                    by ShipStack AI
+                    Built by DAU Labs
                   </div>
                 </div>
               </Link>
@@ -171,7 +171,7 @@ export const PlatformLayout = () => {
                 <div className="hidden md:flex items-center gap-2 rounded-full border border-slate-200 bg-white px-2.5 py-1.5 text-xs text-slate-600">
                   <Building2 className="h-3.5 w-3.5 text-slate-400" />
                   <span className="max-w-[190px] truncate">
-                    {isPlatformAdmin ? "ShipStack Admin" : activeOrg.name}
+                    {isPlatformAdmin ? "Bookhatch Admin" : activeOrg.name}
                   </span>
                   {canSwitchOrg && !isPlatformAdmin ? (
                     <select
