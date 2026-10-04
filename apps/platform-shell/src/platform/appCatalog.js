@@ -1,6 +1,7 @@
 import {
   Building2,
   Bot,
+  Calendar,
   CalendarRange,
   CircleEllipsis,
   FlaskConical,
@@ -26,17 +27,9 @@ export const PLATFORM_APPS = [
     accent: 'from-amber-400/30 via-amber-300/10 to-transparent',
   },
   {
-    id: 'chatbot_agents',
-    slug: 'chatbot-agents',
-    label: 'Chatbot Agents',
-    iconKey: 'chatbot_agents',
-    defaultRoute: '/app/chatbot-agents',
-    accent: 'from-sky-400/30 via-sky-300/10 to-transparent',
-  },
-  {
     id: 'sms',
     slug: 'sms',
-    label: 'SMS Outreach',
+    label: 'SMS & Reminders',
     iconKey: 'sms',
     defaultRoute: '/app/sms/dashboard',
     accent: 'from-green-400/30 via-green-300/10 to-transparent',
@@ -65,23 +58,25 @@ export const APP_WORKSPACE_NAV = {
     { to: '/app/appointment-setter/voice-agents', label: 'Voice Agents', icon: Mic2 },
     { to: '/app/appointment-setter/appointments', label: 'Appointments', icon: CalendarRange },
     { to: '/app/appointment-setter/voice-testing', label: 'Voice Testing', icon: RadioTower },
+    { to: '/app/appointment-setter/calendar', label: 'Google Calendar', icon: Calendar },
     { to: '/app/appointment-setter/twilio', label: 'Twilio', icon: Settings2 },
-    // Telephony and Cold Caller are intentionally hidden from the active platform nav for now.
+    // Telephony is intentionally hidden from the active platform nav for now.
     // { to: '/app/appointment-setter/telephony', label: 'Telephony', icon: Network },
-    // { to: '/app/appointment-setter/cold-caller', label: 'Cold Caller', icon: PhoneCall },
   ],
-  chatbot_agents: [
-    { to: '/app/chatbot-agents', label: 'Workspace', icon: Bot },
-    { to: '/app/chatbot-agents/live', label: 'Live Chats', icon: CircleEllipsis },
-  ],
+  // Chatbot and live-chat are hidden from active platform navigation.
+  // chatbot_agents: [
+  //   { to: '/app/chatbot-agents', label: 'Workspace', icon: Bot },
+  //   { to: '/app/chatbot-agents/live', label: 'Live Chats', icon: CircleEllipsis },
+  // ],
   sms: [
     { to: '/app/sms/dashboard', label: 'Overview', icon: LayoutDashboard },
-    { to: '/app/sms/campaigns', label: 'Campaigns', icon: Send },
-    { to: '/app/sms/leads', label: 'Leads', icon: Users },
-    { to: '/app/sms/inbox', label: 'Inbox', icon: Inbox },
-    { to: '/app/sms/test', label: 'Test', icon: FlaskConical },
-    { to: '/app/sms/suppressions', label: 'Suppressions', icon: ShieldOff },
+    { to: '/app/sms/inbox', label: 'Inbox & Confirmations', icon: Inbox },
+    { to: '/app/sms/test', label: 'Test SMS', icon: FlaskConical },
     { to: '/app/sms/settings', label: 'Settings', icon: Settings2 },
+    // Bulk campaigns and lead lists hidden - confirmations & reminders only
+    // { to: '/app/sms/campaigns', label: 'Campaigns', icon: Send },
+    // { to: '/app/sms/leads', label: 'Leads', icon: Users },
+    // { to: '/app/sms/suppressions', label: 'Suppressions', icon: ShieldOff },
   ],
   users: [
     { to: '/app/users/platform-users', label: 'Platform Users', icon: Users },

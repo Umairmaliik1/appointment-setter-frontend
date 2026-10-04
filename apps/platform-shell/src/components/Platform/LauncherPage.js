@@ -103,14 +103,9 @@ const LauncherPage = () => {
                     {getGreeting()}, {user?.first_name || "there"}!
                   </h1>
                   <p className="mt-2 text-sm text-slate-500">
-                    {branding?.brand_name || "MindRind"} workspace
+                    {branding?.brand_name || "Bookhatch AI"} workspace
                     {activeOrg?.name ? ` - ${activeOrg.name}` : ""}
                   </p>
-                  {!entitlements?.appointment_setter_enabled && (
-                    <p className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-amber-600">
-                      Appointment Setter is pending partner approval
-                    </p>
-                  )}
                 </div>
               </div>
             </div>

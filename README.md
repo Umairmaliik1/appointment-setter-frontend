@@ -1,6 +1,7 @@
-# SamAI Rep Frontend Monorepo
+# Bookhatch AI - Frontend Monorepo
 
-This repository now uses a frontend-only monorepo layout with pnpm workspaces and Turborepo.
+> **Every call answered, Every job booked. Built by DAU Labs**  
+> Workspace for the Bookhatch AI platform shell, microfrontends, and shared design system.
 
 ## Layout
 

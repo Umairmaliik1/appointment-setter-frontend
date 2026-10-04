@@ -1,4 +1,6 @@
-# Appointment Setter Frontend - Application Documentation
+# Bookhatch AI Frontend - Application Documentation
+
+> **Every call answered, Every job booked. Built by DAU Labs**
 
 ## Table of Contents
 1. [Application Overview](#application-overview)
@@ -16,7 +18,7 @@
 
 ## Application Overview
 
-**Appointment Setter Frontend** is a React-based SaaS platform designed for managing AI-powered voice agents that handle appointment scheduling for service-based businesses (primarily plumbing services). The application enables businesses to:
+**Bookhatch AI** is an enterprise voice AI platform designed for managing autonomous voice agents that handle appointment scheduling and call triage for service-based businesses. The application enables businesses to:
 
 - Create and manage multiple tenants (businesses)
 - Configure AI voice agents for different service types

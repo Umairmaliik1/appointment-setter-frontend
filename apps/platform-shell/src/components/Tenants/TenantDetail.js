@@ -12,7 +12,7 @@ import {
   Users,
 } from "lucide-react";
 
-import { tenantAPI, agentAPI } from "../../services/api";
+import { tenantAPI, agentAPI, calendarAPI } from "../../services/api";
 import Loader from "../Loader";
 
 const formatTimestamp = (value) =>
@@ -62,6 +62,7 @@ const TenantDetail = () => {
   const [businessInfo, setBusinessInfo] = useState(null);
   const [agentSettings, setAgentSettings] = useState(null);
   const [twilioIntegration, setTwilioIntegration] = useState(null);
+  const [calendarStatus, setCalendarStatus] = useState(null);
   const [agents, setAgents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -79,13 +80,14 @@ const TenantDetail = () => {
       setLoading(true);
       setError("");
 
-      const [tenantRes, businessRes, settingsRes, integrationRes, agentsRes] =
+      const [tenantRes, businessRes, settingsRes, integrationRes, agentsRes, calendarRes] =
         await Promise.allSettled([
           tenantAPI.getTenant(id),
           tenantAPI.getBusinessInfo(id).catch(() => null),
           tenantAPI.getAgentSettings(id).catch(() => null),
           tenantAPI.getTwilioIntegration(id).catch(() => null),
           agentAPI.listAgents(id).catch(() => ({ data: [] })),
+          calendarAPI.getStatus(id).catch(() => null),
         ]);
 
       if (tenantRes.status === "fulfilled") {
@@ -104,6 +106,10 @@ const TenantDetail = () => {
 
       if (integrationRes.status === "fulfilled" && integrationRes.value) {
         setTwilioIntegration(integrationRes.value.data);
+      }
+
+      if (calendarRes.status === "fulfilled" && calendarRes.value) {
+        setCalendarStatus(calendarRes.value.data);
       }
 
       if (agentsRes.status === "fulfilled") {
@@ -309,6 +315,55 @@ const TenantDetail = () => {
             )}
           </Section>
 
+          <Section title="Google Calendar Sync" icon={Calendar}>
+            {calendarStatus?.connected ? (
+              <div className="space-y-3">
+                <span className="inline-flex rounded-full bg-emerald-400/14 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-emerald-400">
+                  Connected
+                </span>
+                <p className="text-sm text-white/66">
+                  Account: {calendarStatus.account_email}
+                </p>
+                <p className="text-xs text-white/50">
+                  Timezone: {calendarStatus.timezone || "UTC"}
+                </p>
+                <Link
+                  to={`/app/appointment-setter/calendar?tenant_id=${id}`}
+                  className="inline-flex text-sm font-medium text-sky-400 no-underline transition hover:text-sky-600"
+                >
+                  Manage Calendar & Working Hours
+                </Link>
+              </div>
+            ) : calendarStatus?.status === "needs_reauth" ? (
+              <div className="space-y-3">
+                <span className="inline-flex rounded-full bg-amber-400/14 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-400">
+                  Needs Reauthorization
+                </span>
+                <p className="text-xs text-amber-200/80">
+                  Google token expired or was revoked. Reconnect needed.
+                </p>
+                <Link
+                  to={`/app/appointment-setter/calendar?tenant_id=${id}`}
+                  className="inline-flex text-sm font-medium text-amber-400 no-underline transition hover:text-amber-500"
+                >
+                  Reconnect Calendar
+                </Link>
+              </div>
+            ) : (
+              <div className="space-y-3">
+                <span className="inline-flex rounded-full bg-white/10 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-white/65">
+                  Not connected
+                </span>
+                <Link
+                  to={`/app/appointment-setter/calendar?tenant_id=${id}`}
+                  className="inline-flex text-sm font-medium text-sky-400 no-underline transition hover:text-sky-600"
+                >
+                  Connect Google Calendar
+                </Link>
+              </div>
+            )}
+          </Section>
+
           {agentSettings && (
             <Section title="Agent Settings" icon={Settings}>
               <p className="text-sm leading-7 text-white/66">
@@ -325,6 +380,12 @@ const TenantDetail = () => {
                 className="block rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-white/84 no-underline transition hover:bg-white/[0.06]"
               >
                 Manage Agents
+              </Link>
+              <Link
+                to="/app/appointment-setter/calendar"
+                className="block rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-3 text-sm text-white/84 no-underline transition hover:bg-white/[0.06]"
+              >
+                Google Calendar Sync
               </Link>
               <Link
                 to="/app/appointment-setter/twilio"

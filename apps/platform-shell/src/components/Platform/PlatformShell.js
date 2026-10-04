@@ -153,8 +153,11 @@ export const PlatformLayout = () => {
                   <Sparkles className="h-5 w-5 text-slate-700" />
                 </div>
                 <div>
-                  <div className="text-[0.78rem] uppercase tracking-[0.2em] text-slate-500">
-                    {branding?.brand_name || "MindRind"}
+                  <div className="text-[0.82rem] font-bold tracking-[0.12em] text-slate-900">
+                    {branding?.brand_name || "Bookhatch AI"}
+                  </div>
+                  <div className="text-[10px] tracking-wide text-slate-400">
+                    Built by DAU Labs
                   </div>
                 </div>
               </Link>
@@ -168,7 +171,7 @@ export const PlatformLayout = () => {
                 <div className="hidden md:flex items-center gap-2 rounded-full border border-slate-200 bg-white px-2.5 py-1.5 text-xs text-slate-600">
                   <Building2 className="h-3.5 w-3.5 text-slate-400" />
                   <span className="max-w-[190px] truncate">
-                    {isPlatformAdmin ? "MindRind Admin" : activeOrg.name}
+                    {isPlatformAdmin ? "Bookhatch Admin" : activeOrg.name}
                   </span>
                   {canSwitchOrg && !isPlatformAdmin ? (
                     <select

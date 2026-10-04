@@ -136,7 +136,8 @@ const RegisterForm = () => {
       <div className="px-8 py-6 flex items-center">
         <div className="flex items-center gap-3">
           <div className="leading-tight">
-            <h1 className="text-2xl font-semibold tracking-wide text-gray-900">MindRind</h1>
+            <h1 className="text-2xl font-bold tracking-tight text-gray-900">Bookhatch AI</h1>
+            <p className="text-xs text-gray-500 font-medium">Every call answered, Every job booked. Built by DAU Labs</p>
           </div>
         </div>
       </div>

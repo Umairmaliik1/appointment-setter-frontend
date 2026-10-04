@@ -9,11 +9,11 @@ import { PLATFORM_APPS, getAppDefinition } from '../platform/appCatalog';
 const PlatformContext = createContext(null);
 
 const DEFAULT_BRANDING = {
-  brand_name: 'MindRind',
+  brand_name: 'Bookhatch AI',
   logo_url: null,
   primary_color: '#0f172a',
   secondary_color: '#ffffff',
-  accent_color: '#f59e0b',
+  accent_color: '#6366f1',
 };
 
 const isOrgStatusBlocked = (status) => {

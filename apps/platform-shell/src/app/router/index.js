@@ -152,7 +152,23 @@ export const createAppRouter = () =>
           element: withSuspense(SetupPasswordForm, "Preparing account setup..."),
         },
         {
+          path: "/bookhatch/admin/setup-password",
+          element: withSuspense(SetupPasswordForm, "Preparing account setup..."),
+        },
+        {
+          path: "/shipstack/admin/setup-password",
+          element: withSuspense(SetupPasswordForm, "Preparing account setup..."),
+        },
+        {
           path: "/reset-password",
+          element: withSuspense(ResetPasswordForm, "Preparing password reset..."),
+        },
+        {
+          path: "/bookhatch/admin/reset-password",
+          element: withSuspense(ResetPasswordForm, "Preparing password reset..."),
+        },
+        {
+          path: "/shipstack/admin/reset-password",
           element: withSuspense(ResetPasswordForm, "Preparing password reset..."),
         },
       ],

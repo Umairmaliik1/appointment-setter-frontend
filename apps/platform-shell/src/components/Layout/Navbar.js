@@ -17,9 +17,14 @@ const Navbar = () => {
       <div className="max-w-7xl px-4">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <Calendar className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-900">AI Phone Scheduler</span>
+            <Link to="/" className="flex items-center space-x-3">
+              <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-indigo-600 text-white shadow-sm">
+                <Calendar className="h-5 w-5" />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-lg font-bold tracking-tight text-gray-900 leading-tight">Bookhatch AI</span>
+                <span className="text-[10px] font-medium text-gray-500">Built by DAU Labs</span>
+              </div>
             </Link>
           </div>
 
