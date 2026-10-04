@@ -1,4 +1,6 @@
-# Appointment Setter Frontend - Application Documentation
+# ShipStack Voice Frontend - Application Documentation
+
+> **Engineered by ShipStack AI**
 
 ## Table of Contents
 1. [Application Overview](#application-overview)
@@ -16,7 +18,7 @@
 
 ## Application Overview
 
-**Appointment Setter Frontend** is a React-based SaaS platform designed for managing AI-powered voice agents that handle appointment scheduling for service-based businesses (primarily plumbing services). The application enables businesses to:
+**ShipStack Voice** is an enterprise voice AI platform designed for managing autonomous voice agents that handle appointment scheduling and call triage for service-based businesses. The application enables businesses to:
 
 - Create and manage multiple tenants (businesses)
 - Configure AI voice agents for different service types

@@ -12,6 +12,7 @@ const TenantEditPage = lazy(() => import('../pages/TenantEditPage'));
 const VoiceAgentsPage = lazy(() => import('../pages/VoiceAgentsPage'));
 const VoiceTestingPage = lazy(() => import('../pages/VoiceTestingPage'));
 const TwilioPage = lazy(() => import('../pages/TwilioPage'));
+const CalendarIntegrationPage = lazy(() => import('../pages/CalendarIntegrationPage'));
 
 const withSuspense = (Component, message) => (
   <RouteSuspense message={message}>
@@ -30,6 +31,8 @@ export const getAppointmentSetterRoutes = () => [
   { path: 'voice-agents', element: withSuspense(VoiceAgentsPage, 'Loading voice agents...') },
   { path: 'voice-testing', element: withSuspense(VoiceTestingPage, 'Loading voice testing...') },
   { path: 'twilio', element: withSuspense(TwilioPage, 'Loading Twilio workspace...') },
+  { path: 'calendar', element: withSuspense(CalendarIntegrationPage, 'Loading Google Calendar settings...') },
+  { path: 'integrations', element: withSuspense(CalendarIntegrationPage, 'Loading integrations...') },
   { path: '*', element: <Navigate to="/app/appointment-setter/dashboard" replace /> },
 ];
 

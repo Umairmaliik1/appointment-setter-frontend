@@ -460,6 +460,12 @@ export const smsAPI = {
     `${WS_BASE_URL}/api/v1/sms/${tenantId}/inbox/ws?token=${encodeURIComponent(accessToken || '')}`,
 };
 
+export const calendarAPI = {
+  getConnectUrl: (tenantId) => api.get(`/api/v1/calendar/google/connect?tenant_id=${encodeURIComponent(tenantId)}`),
+  getStatus: (tenantId) => api.get(`/api/v1/calendar/status?tenant_id=${encodeURIComponent(tenantId)}`),
+  disconnect: (tenantId) => api.delete(`/api/v1/calendar/google?tenant_id=${encodeURIComponent(tenantId)}`),
+};
+
 export const healthAPI = {
   check: () => api.get('/api/v1/health'.replace(/\/+$/, '')),
   detailed: () => api.get('/api/v1/health/detailed'.replace(/\/+$/, '')),

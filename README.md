@@ -1,6 +1,7 @@
-# SamAI Rep Frontend Monorepo
+# ShipStack Voice - Frontend Monorepo
 
-This repository now uses a frontend-only monorepo layout with pnpm workspaces and Turborepo.
+> **Engineered by ShipStack AI**  
+> Workspace for the ShipStack Voice platform shell, microfrontends, and shared design system.
 
 ## Layout
 
