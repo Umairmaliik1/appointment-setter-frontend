@@ -4,9 +4,10 @@ node_modules/
 build/
 dist/
 coverage/
+.env
+.env.local
 .env.*.local
 apps/*/build/
 apps/*/node_modules/
 packages/*/node_modules/
 .idea*
-config.bat
